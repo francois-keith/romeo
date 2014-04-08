@@ -1,7 +1,7 @@
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -s -c` main" > /etc/apt/sources.list.d/ros-latest.list'
 wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install ros-hydro-ros	ros-hydro-common-rosdeps ros-hydro-robot-model	ros-hydro-common-msgs ros-hydro-rosdoc-lite	
+sudo apt-get install ros-hydro-ros-base
 
 source /opt/ros/*/setup.bash
 
