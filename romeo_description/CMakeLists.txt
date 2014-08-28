@@ -9,25 +9,25 @@ catkin_package()
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/launch/display.launch
   ${CMAKE_CURRENT_SOURCE_DIR}/launch/display.rviz
   ${CMAKE_CURRENT_SOURCE_DIR}/launch/sot_display.launch
-  DESTINATION ${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/launch
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${PROJECT_NAME}/launch
 )
 # Install generated urdf files
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/urdf/romeo.urdf
   ${CMAKE_CURRENT_SOURCE_DIR}/urdf/romeo_small.urdf
-  DESTINATION ${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/urdf
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${PROJECT_NAME}/urdf
   )
 
 # Install srdf files
 install(FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/srdf/romeo.srdf
   ${CMAKE_CURRENT_SOURCE_DIR}/srdf/romeo_small.srdf
-  DESTINATION ${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/srdf
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${PROJECT_NAME}/srdf
   )
 
 # Install rcpdf files
 install(FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/rcpdf/romeo.rcpdf
-  DESTINATION ${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/rcpdf
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${PROJECT_NAME}/rcpdf
   )
 
 # Install meshes
@@ -44,7 +44,7 @@ set (MESHES HeadRoll.dae LAnkleRollBasic.dae LAnkleRoll.dae
 
 foreach(file ${MESHES})
   install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/meshes/${file}
-    DESTINATION ${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/meshes
+    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${PROJECT_NAME}/meshes
     PERMISSIONS OWNER_READ GROUP_READ WORLD_READ OWNER_WRITE
     )
 endforeach()
